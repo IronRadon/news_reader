@@ -1,0 +1,19 @@
+<h1>All My Feeds</h1>
+
+<div class="feeds">
+	<ul>
+	<% feeds.each(function(feed) { %>
+	  <li><a href="#/feeds/<%= feed.get('id') %>/entries"><%= feed.get('title') %></a></li>
+	<% }); %>
+  </ul>
+	<br>
+	<h2>Add New Feed</h2>
+	<form>
+		<label for="feed_title">Title: </label>
+		<input type="text" id="feed_title" name="feed[title]">
+		<label for="feed_url">URL: </label>
+		<input type="url" id="feed_url" name="feed[url]">
+		<br>
+		<input type="submit" value="Submit Feed">
+	</form>
+</div>
